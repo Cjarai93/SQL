@@ -1,20 +1,26 @@
-CREATE TABLE Plants (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, difficulty TEXT, aisle INTEGER);
+--Create Plant Store Database
+
+CREATE TABLE plants (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, difficulty TEXT, popularity INTEGER);
  
-INSERT INTO Plants VALUES (1, "Monstera", 14.99, "Easy", 6);
-INSERT INTO Plants VALUES (2, "Satin Pothos", 10.99, "Easy", 6);
-INSERT INTO Plants VALUES (3, "Heart Leaf", 11.99, "Easy", 6);
-INSERT INTO Plants VALUES (4, "G. Pothos", 9.99, "Easy", 6);
-INSERT INTO Plants VALUES (5, "Sword Fern", 15.99, "Hard", 6);
-INSERT INTO Plants VALUES (6, "Alocasia", 8.99, "Hard", 6);
-INSERT INTO Plants VALUES (7, "Fukien Tea", 14.99, "Easy", 6);
-INSERT INTO Plants VALUES (8, "White BOP", 25.99, "Hard", 6);
-INSERT INTO Plants VALUES (9, "Ficus", 17.99, "Easy", 6);
-INSERT INTO Plants VALUES (10, "SQ Pothos", 19.99, "Easy", 6);
-INSERT INTO Plants VALUES (11, "Peacock Plant", 7.99, "Hard", 6);
-INSERT INTO Plants VALUES (12, "N Joy Pothos", 15.99, "Easy", 6);
-INSERT INTO Plants VALUES (13, "Guiana Chestnut", 12.99, "Hard", 6);
-INSERT INTO Plants VALUES (14, "Snake Plant", 16.99, "Easy", 6);
-INSERT INTO Plants VALUES (15, "Raven ZZ", 17.99, "Easy", 6);
- 
-SELECT * FROM Plants ORDER BY price; 
-SELECT SUM(price) FROM Plants 
+INSERT INTO plants VALUES (1, "monstera", 14.99, "easy", 95);
+INSERT INTO plants VALUES (2, "satin pothos", 10.99, "easy", 70);
+INSERT INTO plants VALUES (3, "heart leaf", 11.99, "easy", 65);
+INSERT INTO plants VALUES (4, "g pothos", 9.99, "easy", 89);
+INSERT INTO plants VALUES (5, "sword fern", 15.99, "hard", 70);
+INSERT INTO plants VALUES (6, "alocasia", 8.99, "medium", 85);
+INSERT INTO plants VALUES (7, "fukien tea", 14.99, "easy", 50);
+INSERT INTO plants VALUES (8, "white bop", 25.99, "hard", 100);
+INSERT INTO plants VALUES (9, "ficus", 17.99, "medium", 65);
+INSERT INTO plants VALUES (10, "sq pothos", 19.99, "easy", 98);
+INSERT INTO plants VALUES (11, "peacock plant", 7.99, "hard", 77);
+INSERT INTO plants VALUES (12, "n joy pothos", 15.99, "easy", 80);
+INSERT INTO plants VALUES (13, "guiana chestnut", 12.99, "hard", 82);
+INSERT INTO plants VALUES (14, "snake plant", 16.99, "easy", 93);
+INSERT INTO plants VALUES (15, "raven zz", 17.99, "easy", 88);
+
+-- displays the database ordered by price
+SELECT * FROM plants ORDER BY price desc; 
+
+-- what is the average price of the hard plants
+SELECT AVG(price) FROM Plants where difficulty ='hard'
+
