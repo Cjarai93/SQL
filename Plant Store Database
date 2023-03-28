@@ -1,0 +1,20 @@
+CREATE TABLE Plants (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, difficulty TEXT, aisle INTEGER);
+ 
+INSERT INTO Plants VALUES (1, "Monstera", 14.99, "Easy", 6);
+INSERT INTO Plants VALUES (2, "Satin Pothos", 10.99, "Easy", 6);
+INSERT INTO Plants VALUES (3, "Heart Leaf", 11.99, "Easy", 6);
+INSERT INTO Plants VALUES (4, "G. Pothos", 9.99, "Easy", 6);
+INSERT INTO Plants VALUES (5, "Sword Fern", 15.99, "Hard", 6);
+INSERT INTO Plants VALUES (6, "Alocasia", 8.99, "Hard", 6);
+INSERT INTO Plants VALUES (7, "Fukien Tea", 14.99, "Easy", 6);
+INSERT INTO Plants VALUES (8, "White BOP", 25.99, "Hard", 6);
+INSERT INTO Plants VALUES (9, "Ficus", 17.99, "Easy", 6);
+INSERT INTO Plants VALUES (10, "SQ Pothos", 19.99, "Easy", 6);
+INSERT INTO Plants VALUES (11, "Peacock Plant", 7.99, "Hard", 6);
+INSERT INTO Plants VALUES (12, "N Joy Pothos", 15.99, "Easy", 6);
+INSERT INTO Plants VALUES (13, "Guiana Chestnut", 12.99, "Hard", 6);
+INSERT INTO Plants VALUES (14, "Snake Plant", 16.99, "Easy", 6);
+INSERT INTO Plants VALUES (15, "Raven ZZ", 17.99, "Easy", 6);
+ 
+SELECT * FROM Plants ORDER BY price; 
+SELECT SUM(price) FROM Plants 
